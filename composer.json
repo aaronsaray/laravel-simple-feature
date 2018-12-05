@@ -1,0 +1,21 @@
+{
+    "name": "aaronsaray/laravel-simple-feature",
+    "description": "Simple feature flag for laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AaronSaray\\LaravelSimpleFeature\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AaronSaray\\LaravelSimpleFeature\\Providers\\LaravelSimpleFeatureProvider"
+            ],
+            "aliases": {
+                "Feature": "AaronSaray\\LaravelSimpleFeature\\Facades\\FeatureFacade"
+            }
+        }
+    }
+}
