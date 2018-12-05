@@ -14,7 +14,7 @@
                 "AaronSaray\\LaravelSimpleFeature\\Providers\\LaravelSimpleFeatureProvider"
             ],
             "aliases": {
-                "Feature": "AaronSaray\\LaravelSimpleFeature\\Facades\\FeatureFacade"
+                "Feature": "AaronSaray\\LaravelSimpleFeature\\Facades\\Feature"
             }
         }
     }

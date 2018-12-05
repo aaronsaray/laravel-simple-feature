@@ -10,11 +10,11 @@ use AaronSaray\LaravelSimpleFeature\Contracts\LaravelSimpleFeatureServiceContrac
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class FeatureFacade
+ * Class Feature
  * @package AaronSaray\LaravelSimpleFeature\Facades
  * @method static boolean can(string $uri)
  */
-class FeatureFacade extends Facade
+class Feature extends Facade
 {
     /**
      * Get the registered name of the component.
