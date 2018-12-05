@@ -37,6 +37,6 @@ class LaravelSimpleFeatureService implements LaravelSimpleFeatureServiceContract
      */
     public function can(string $feature): bool
     {
-        return (bool) $this->config('laravel-simple-feature.' . $feature);
+        return (bool) $this->config->get('laravel-simple-feature.' . $feature);
     }
 }
