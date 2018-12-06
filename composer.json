@@ -8,6 +8,11 @@
             "AaronSaray\\LaravelSimpleFeature\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+          "AaronSaray\\LaravelSimpleFeature\\Tests\\": "tests/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -17,5 +22,16 @@
                 "Feature": "AaronSaray\\LaravelSimpleFeature\\Facades\\Feature"
             }
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0"
+    },
+    "scripts": {
+        "test": [
+            "@php vendor/bin/phpunit --colors=always"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "Run all PHPUnit tests."
     }
 }

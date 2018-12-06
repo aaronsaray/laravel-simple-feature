@@ -26,9 +26,6 @@ To use, you can use the following method to get a boolean:
 
 `AaronSaray\LaravelSimpleFeature\Facades\Feature::can('your-feature')`
 
+You can also use `on` and `off`.
+
 You can also inject the service `AaronSaray\LaravelSimpleFeature\Services\LaravelSimpleFeatureService` if you like.
-
-## Todo
-
-Need to write some tests for this sucka.  Right now I'm lucky because it's being
-used in my own projects which have tests surrounding this usage like integration.
