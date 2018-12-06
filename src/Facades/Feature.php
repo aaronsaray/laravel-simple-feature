@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Facade;
  * Class Feature
  * @package AaronSaray\LaravelSimpleFeature\Facades
  * @method static boolean can(string $uri)
+ * @method static boolean on(string $uri)
+ * @method static boolean off(string $uri)
  */
 class Feature extends Facade
 {

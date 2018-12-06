@@ -19,4 +19,20 @@ interface LaravelSimpleFeatureServiceContract
      * @return bool
      */
     public function can(string $feature): bool;
+
+    /**
+     * Is this feature on?
+     *
+     * @param string $feature
+     * @return bool
+     */
+    public function on(string $feature): bool;
+
+    /**
+     * Is this feature off?
+     *
+     * @param string $feature
+     * @return bool
+     */
+    public function off(string $feature): bool;
 }
