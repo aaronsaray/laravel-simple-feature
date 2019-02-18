@@ -7,7 +7,9 @@ declare(strict_types=1);
 namespace AaronSaray\LaravelSimpleFeature\Providers;
 
 use AaronSaray\LaravelSimpleFeature\Contracts\LaravelSimpleFeatureServiceContract;
+use AaronSaray\LaravelSimpleFeature\Facades\Feature;
 use AaronSaray\LaravelSimpleFeature\Services\LaravelSimpleFeatureService;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -24,6 +26,7 @@ class LaravelSimpleFeatureProvider extends ServiceProvider
     public function boot(): void
     {
         $this->bootPublishableFiles();
+        $this->bootBladeDirectives();
     }
 
     /**
@@ -47,6 +50,16 @@ class LaravelSimpleFeatureProvider extends ServiceProvider
                 __DIR__ . '/../../config/laravel-simple-feature.php' => config_path('laravel-simple-feature.php'),
             ], 'config');
         }
+    }
+
+    /**
+     * Boot up any blade directives
+     */
+    protected function bootBladeDirectives(): void
+    {
+        Blade::if('feature', function (string $feature) {
+            return Feature::can($feature);
+        });
     }
 
     /**

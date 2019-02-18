@@ -22,4 +22,15 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     {
         return [LaravelSimpleFeatureProvider::class];
     }
+    
+    /**
+     * Define environment setup.
+     *
+     * @param \Illuminate\Foundation\Application $app
+     * @return void
+     */
+    protected function getEnvironmentSetUp($app): void
+    {
+        $app['config']->set('view.paths', [__DIR__ . '/blade']);
+    }
 }

@@ -29,3 +29,13 @@ To use, you can use the following method to get a boolean:
 You can also use `on` and `off`.
 
 You can also inject the service `AaronSaray\LaravelSimpleFeature\Services\LaravelSimpleFeatureService` if you like.
+
+Finally, you can use a Blade directive as an `if` statement.
+
+```
+@feature('some-feature')
+    <p>This is when the feature is on!</p>
+@else
+    <p>This is if the feature is off.</p>
+@endfeature
+```
